@@ -1,10 +1,12 @@
 package com.skilldistillery.jets.entities;
 
 public class PassengerJet extends Jet {
+	
+	// This was my JetImpl class, it has all the same functionality, 
+	// I just added takeTrip as well, hopefully that's ok!
 
 	public PassengerJet(String model, double speed, int range, long price) {
 		super(model, speed, range, price);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

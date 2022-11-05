@@ -25,8 +25,6 @@ public class AirField {
 		}
 	}
 
-	
-
 	public void listFleet() {
 		for (Jet jet : jets) {
 			System.out.println(jet);
@@ -38,6 +36,21 @@ public class AirField {
 		for (Jet jet : jets) {
 			jet.fly();
 			printStars();
+		}
+	}
+
+	public void soloMission(String model) {
+		boolean jetNotFound = true;
+		for (int i = 0; i < jets.size(); i++) {
+			if (jets.get(i).getModel().equalsIgnoreCase(model)) {
+				jets.get(i).fly();
+				printStars();
+				jetNotFound = false;
+				break;
+			}
+		}
+		if (jetNotFound) {
+			System.out.println("No such model exists. Please try again.");
 		}
 	}
 
@@ -55,7 +68,7 @@ public class AirField {
 			}
 		}
 	}
-	
+
 	public void longestRange() {
 		int farthest = 0;
 		for (Jet jet : jets) {
@@ -69,9 +82,9 @@ public class AirField {
 				printStars();
 			}
 		}
-		
+
 	}
-	
+
 	public void loadCargo() {
 		for (Jet jet : jets) {
 			if (jet instanceof CargoCarrier) {
@@ -80,17 +93,17 @@ public class AirField {
 			}
 		}
 	}
-	
+
 	public void dogFight() {
 		for (Jet jet : jets) {
 			if (jet instanceof Fighter) {
 				((Fighter) jet).fight();
 				printStars();
 			}
-			
+
 		}
 	}
-	
+
 	public void spyMission() {
 		for (Jet jet : jets) {
 			if (jet instanceof SpyClass) {
@@ -99,7 +112,7 @@ public class AirField {
 			}
 		}
 	}
-	
+
 	public void takeTrip() {
 		for (Jet jet : jets) {
 			if (jet instanceof PassengerJet) {
@@ -120,18 +133,22 @@ public class AirField {
 			jets.add(new PassengerJet(model, speed, range, price));
 		}
 	}
-	
+
 	public void removeJet(String model) {
-		for (int i = 0; i < jets.size(); i++) {	
+		boolean jetNotFound = true;
+		for (int i = 0; i < jets.size(); i++) {
 			if (jets.get(i).getModel().equalsIgnoreCase(model)) {
 				jets.remove(i);
 				System.out.println(model + " has been removed.");
+				jetNotFound = false;
 				break;
 			}
+		}
+		if (jetNotFound) {
 			System.out.println("No such model exists. Please try again.");
 		}
 	}
-	
+
 	public void printStars() {
 		System.out.println("-----------------------------------------------------------------------------------------");
 	}
