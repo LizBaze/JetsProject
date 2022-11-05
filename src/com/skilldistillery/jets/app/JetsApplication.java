@@ -106,7 +106,8 @@ public class JetsApplication {
 		categories.add("CARGO");
 		categories.add("FIGHTER");
 		categories.add("RECONNAISSANCE");
-		do {
+		try {
+			do {
 			System.out.println("Passenger, Cargo, Fighter, or Reconnaissance?");
 			type = sc.next();
 			sc.nextLine();
@@ -131,6 +132,10 @@ public class JetsApplication {
 		sc.nextLine();
 		af.addJet(type, model, speed, range, price);
 		System.out.println("Your jet has been added to the fleet.");
+		} catch (InputMismatchException e){
+			System.out.println("Something went wrong. Please try again.");
+			sc.nextLine();
+		}
 	}
 
 	public void removeJet() {
