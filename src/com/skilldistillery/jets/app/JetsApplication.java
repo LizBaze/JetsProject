@@ -18,8 +18,8 @@ public class JetsApplication {
 		System.out.println("**** Welcome to JetLines Enterprises! ****");
 		boolean keepGoing = true;
 		int userInput = 0;
+		
 		do {
-
 			try {
 				displayUserMenu();
 				userInput = sc.nextInt();
@@ -70,7 +70,6 @@ public class JetsApplication {
 				userInput = 0;
 				sc.nextLine();
 			}
-
 		} while (keepGoing);
 
 		System.out.println("Thanks for using JetLines Enterprises. Have a nice day!");
@@ -92,7 +91,7 @@ public class JetsApplication {
 	}
 
 	public void flySolo() {
-		System.out.println("Which jet do you want to take out?");
+		System.out.println("Which model of jet would you like to fly?");
 		af.soloMission(sc.next());
 		sc.nextLine();
 	}
