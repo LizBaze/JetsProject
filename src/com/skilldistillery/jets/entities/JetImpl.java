@@ -9,7 +9,6 @@ public class JetImpl extends Jet {
 
 	@Override
 	public void fly() {
-		System.out.println("I can take you anywhere you wanna go");
-	}
+		System.out.println(toString() + ", Max Flight Time: " + (getRange() / getSpeed()) + " hours");	}
 
 }

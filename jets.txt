@@ -2,4 +2,4 @@ Spy,U2,500,7000,70000000
 Fighter,F16,350,3000,40000000
 Cargo,Globemaster,1500,5500,45000000
 Passenger,Boeing 747,2500,3500,30000000
-Passenger,Embraer Legacy,5000,4000,25000000
+Passenger,Embraer Legacy,5000,10000,25000000

@@ -1,7 +1,7 @@
 package com.skilldistillery.jets.entities;
 
 public class CargoPlane extends Jet implements CargoCarrier{
-
+	
 	
 	
 	
@@ -14,14 +14,13 @@ public class CargoPlane extends Jet implements CargoCarrier{
 	@Override
 	public void loadCargo() {
 		// TODO Auto-generated method stub
-		System.out.println("What do you want me to carry?");
+		System.out.println("I'm a " + getModel() + " and I'll carry anything, just throw it in there");
 	}
 
 	@Override
 	public void fly() {
 		// TODO Auto-generated method stub
-		System.out.println("I may be slow but I'll get there eventually");
-	}
+		System.out.println(toString() + ", Max Flight Time: " + (getRange() / getSpeed()) + " hours");	}
 	
 	
 

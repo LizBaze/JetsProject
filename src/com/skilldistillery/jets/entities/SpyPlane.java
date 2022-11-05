@@ -9,14 +9,13 @@ public class SpyPlane extends Jet implements SpyClass{
 	@Override
 	public void spy() {
 		// TODO Auto-generated method stub
-		System.out.println("Hey what do you think they're doing down there? What do you mean that's *my* job!?");
+		System.out.println(getModel() + " reporting in. Hey what do you think they're doing down there? What do you mean that's *my* job!?");
 		
 	}
 
 	@Override
 	public void fly() {
-		System.out.println("Gosh it sure is high up here");
-	}
+		System.out.println(toString() + ", Max Flight Time: " + (getRange() / getSpeed()) + " hours");	}
 	
 	
 
