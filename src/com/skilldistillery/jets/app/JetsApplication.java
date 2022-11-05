@@ -15,9 +15,10 @@ public class JetsApplication {
 	}
 
 	public void launch() {
+		System.out.println("**** Welcome to JetLines Enterprises! ****");
 		boolean keepGoing = true;
 		int userInput = 0;
-		while (keepGoing) {
+		do {
 
 			try {
 				displayUserMenu();
@@ -64,30 +65,30 @@ public class JetsApplication {
 					invalidSelection();
 					break;
 				}
-				sc.nextLine();
 			} catch (InputMismatchException e) {
 				invalidSelection();
 				userInput = 0;
+				sc.nextLine();
 			}
 
-		}
+		} while (keepGoing);
 
 		System.out.println("Thanks for using JetLines Enterprises. Have a nice day!");
 	}
 
 	public void displayUserMenu() {
-		System.out.println("1. List fleet");
-		System.out.println("2. Fly all jets");
-		System.out.println("3. Fly a solo mission");
-		System.out.println("4. View fastest jet");
-		System.out.println("5. View jet with longest range");
-		System.out.println("6. Load all Cargo Jets");
-		System.out.println("7. Dogfight");
-		System.out.println("8. Commence intel operation");
-		System.out.println("9. Take a trip");
-		System.out.println("10. Add a jet");
-		System.out.println("11. Remove a jet");
-		System.out.println("12. Quit");
+		System.out.println("**********   1. List fleet    ************");
+		System.out.println("******      2. Fly all jets        *******");
+		System.out.println("****      3. Fly a solo mission      *****");
+		System.out.println("*****      4. View fastest jet      ******");
+		System.out.println("****  5. View jet with longest range  ****");
+		System.out.println("******   6. Load all Cargo Jets   ********");
+		System.out.println("*******       7. Dogfight        *********");
+		System.out.println("******  8. Commence intel operation  *****");
+		System.out.println("*******      9. Take a trip      *********");
+		System.out.println("*********    10. Add a jet    ************");
+		System.out.println("**********  11. Remove a jet  ************");
+		System.out.println("***********    12. Quit    ***************");
 	}
 
 	public void flySolo() {
