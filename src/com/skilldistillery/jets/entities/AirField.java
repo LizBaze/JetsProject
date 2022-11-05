@@ -44,13 +44,13 @@ public class AirField {
 	public void fastestJet() {
 		double fastest = 0;
 		for (Jet jet : jets) {
-			if (jet.getSpeed() > fastest) {
-				fastest = jet.getSpeed();
-			}
+			fastest = Math.max(fastest, jet.getSpeed());
 		}
+		System.out.println("The fastest jet(s) are listed below:");
+		printStars();
 		for (Jet jet2 : jets) {
 			if (jet2.getSpeed() >= fastest) {
-				System.out.println("The fastest jet is the " + jet2);
+				System.out.println(jet2);
 				printStars();
 			}
 		}
@@ -59,13 +59,13 @@ public class AirField {
 	public void longestRange() {
 		int farthest = 0;
 		for (Jet jet : jets) {
-			if (jet.getRange() > farthest) {
-				farthest = jet.getRange();
-			}
+			farthest = Math.max(farthest, jet.getRange());
 		}
+		System.out.println("The jet(s) with the longest range are listed below:");
+		printStars();
 		for (Jet jet : jets) {
 			if (jet.getRange() >= farthest) {
-				System.out.println("The jet with the longest range is the " + jet);
+				System.out.println(jet);
 				printStars();
 			}
 		}
@@ -113,7 +113,7 @@ public class AirField {
 	}
 	
 	public void removeJet(String model) {
-		for (int i = 0; i < jets.size(); i++) {
+		for (int i = 0; i < jets.size(); i++) {	
 			if (jets.get(i).getModel().equalsIgnoreCase(model)) {
 				jets.remove(i);
 				System.out.println(model + " has been removed.");
