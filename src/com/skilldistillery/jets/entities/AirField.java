@@ -99,6 +99,15 @@ public class AirField {
 			}
 		}
 	}
+	
+	public void takeTrip() {
+		for (Jet jet : jets) {
+			if (jet instanceof PassengerJet) {
+				((PassengerJet) jet).takeTrip();
+				printStars();
+			}
+		}
+	}
 
 	public void addJet(String type, String model, double speed, int range, long price) {
 		if (type.equalsIgnoreCase("Spy")) {
@@ -108,7 +117,7 @@ public class AirField {
 		} else if (type.equalsIgnoreCase("Cargo")) {
 			jets.add(new CargoPlane(model, speed, range, price));
 		} else if (type.equalsIgnoreCase("Passenger")) {
-			jets.add(new JetImpl(model, speed, range, price));
+			jets.add(new PassengerJet(model, speed, range, price));
 		}
 	}
 	

@@ -16,8 +16,9 @@ public class Fighter extends Jet implements CombatReady{
 	@Override
 	public void fly() {
 		// TODO Auto-generated method stub
-		System.out.println(toString() + ", Max Flight Time: " + (getRange() / getSpeed()) + " hours");
+		System.out.println(getClass().getSimpleName() + ", " + toString() + ", Max Flight Time: " + (getRange() / getSpeed()) + " hours");	
+		}
 	}
 
 
-}
+

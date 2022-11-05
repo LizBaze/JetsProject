@@ -15,7 +15,8 @@ public class SpyPlane extends Jet implements SpyClass{
 
 	@Override
 	public void fly() {
-		System.out.println(toString() + ", Max Flight Time: " + (getRange() / getSpeed()) + " hours");	}
+		System.out.println(getClass().getSimpleName() + ", " + toString() + ", Max Flight Time: " + (getRange() / getSpeed()) + " hours");	
+		}
 	
 	
 

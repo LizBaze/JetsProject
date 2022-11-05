@@ -43,12 +43,15 @@ public class JetsApplication {
 				af.spyMission();
 				break;
 			case 8:
-				addJet();
+				af.takeTrip();
 				break;
 			case 9:
-				removeJet();
+				addJet();
 				break;
 			case 10:
+				removeJet();
+				break;
+			case 11:
 				keepGoing = false;
 				break;
 			default:
@@ -66,9 +69,10 @@ public class JetsApplication {
 		System.out.println("5. Load all Cargo Jets");
 		System.out.println("6. Dogfight");
 		System.out.println("7. Commence intel operation");
-		System.out.println("8. Add a jet"); // TODO
-		System.out.println("9. Remove a jet"); // TODO
-		System.out.println("10. Quit");
+		System.out.println("8. Take a trip");
+		System.out.println("9. Add a jet"); // TODO
+		System.out.println("10. Remove a jet"); // TODO
+		System.out.println("11. Quit");
 	}
 	
 	public void addJet() {
