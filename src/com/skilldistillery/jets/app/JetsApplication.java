@@ -61,14 +61,13 @@ public class JetsApplication {
 					keepGoing = false;
 					break;
 				default:
-					System.out.println("Invalid selection. Please try again.");
+					invalidSelection();
+					break;
 				}
-			} catch (InputMismatchException e) {
-				System.out.println("***********************************");
-				System.out.println("Invalid selection, please try again");
-				System.out.println("***********************************");
-				userInput = 0;
 				sc.nextLine();
+			} catch (InputMismatchException e) {
+				invalidSelection();
+				userInput = 0;
 			}
 
 		}
@@ -120,5 +119,11 @@ public class JetsApplication {
 		String userInput = sc.next();
 		sc.nextLine();
 		af.removeJet(userInput);
+	}
+
+	public void invalidSelection() {
+		System.out.println("***********************************");
+		System.out.println("Invalid selection, please try again");
+		System.out.println("***********************************");
 	}
 }
