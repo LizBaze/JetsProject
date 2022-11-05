@@ -1,6 +1,8 @@
 package com.skilldistillery.jets.app;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 import com.skilldistillery.jets.entities.AirField;
@@ -18,7 +20,7 @@ public class JetsApplication {
 		System.out.println("**** Welcome to JetLines Enterprises! ****");
 		boolean keepGoing = true;
 		int userInput = 0;
-		
+
 		do {
 			try {
 				displayUserMenu();
@@ -97,8 +99,24 @@ public class JetsApplication {
 	}
 
 	public void addJet() {
-		System.out.println("Passenger, Cargo, Fighter, or Spyclass?");
-		String type = sc.next();
+		boolean realCategory = false;
+		String type = "";
+		List<String> categories = new ArrayList<>();
+		categories.add("PASSENGER");
+		categories.add("CARGO");
+		categories.add("FIGHTER");
+		categories.add("SPYCLASS");
+		do {
+			System.out.println("Passenger, Cargo, Fighter, or Spyclass?");
+			type = sc.next();
+			sc.nextLine();
+			if (categories.contains(type.toUpperCase())) {
+				realCategory = true;
+			} else {
+				System.out.println("That type of jet is not supported. Please try again.");
+			}
+		} while ( ! realCategory);
+
 		System.out.println("Please enter the model: ");
 		String model = sc.next();
 		System.out.println("Please enter the speed: ");

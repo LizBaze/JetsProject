@@ -82,7 +82,6 @@ public class AirField {
 				printStars();
 			}
 		}
-
 	}
 
 	public void loadCargo() {
@@ -123,14 +122,22 @@ public class AirField {
 	}
 
 	public void addJet(String type, String model, double speed, int range, long price) {
-		if (type.equalsIgnoreCase("Spy")) {
+		switch (type.toUpperCase()) {
+		case "SPY":
 			jets.add(new SpyPlane(model, speed, range, price));
-		} else if (type.equalsIgnoreCase("Fighter")) {
+			break;
+		case "FIGHTER": 
 			jets.add(new Fighter(model, speed, range, price));
-		} else if (type.equalsIgnoreCase("Cargo")) {
+			break;
+		case "CARGO":
 			jets.add(new CargoPlane(model, speed, range, price));
-		} else if (type.equalsIgnoreCase("Passenger")) {
+			break;
+		case "PASSENGER":
 			jets.add(new PassengerJet(model, speed, range, price));
+			break;
+		default:
+			System.out.println("That type of jet is not supported. Please try again.");
+			break;
 		}
 	}
 
