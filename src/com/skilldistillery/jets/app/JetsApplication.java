@@ -133,7 +133,9 @@ public class JetsApplication {
 		af.addJet(type, model, speed, range, price);
 		System.out.println("Your jet has been added to the fleet.");
 		} catch (InputMismatchException e){
+			System.out.println("***************************************");
 			System.out.println("Something went wrong. Please try again.");
+			System.out.println("***************************************");
 			sc.nextLine();
 		}
 	}
