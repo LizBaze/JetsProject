@@ -123,7 +123,7 @@ public class AirField {
 
 	public void addJet(String type, String model, double speed, int range, long price) {
 		switch (type.toUpperCase()) {
-		case "SPY":
+		case "RECONNAISSANCE":
 			jets.add(new SpyPlane(model, speed, range, price));
 			break;
 		case "FIGHTER": 

@@ -105,9 +105,9 @@ public class JetsApplication {
 		categories.add("PASSENGER");
 		categories.add("CARGO");
 		categories.add("FIGHTER");
-		categories.add("SPYCLASS");
+		categories.add("RECONNAISSANCE");
 		do {
-			System.out.println("Passenger, Cargo, Fighter, or Spyclass?");
+			System.out.println("Passenger, Cargo, Fighter, or Reconnaissance?");
 			type = sc.next();
 			sc.nextLine();
 			if (categories.contains(type.toUpperCase())) {
@@ -119,6 +119,7 @@ public class JetsApplication {
 
 		System.out.println("Please enter the model: ");
 		String model = sc.next();
+		sc.nextLine();
 		System.out.println("Please enter the speed: ");
 		double speed = sc.nextDouble();
 		sc.nextLine();
