@@ -8,7 +8,6 @@ public class SpyPlane extends Jet implements SpyClass{
 
 	@Override
 	public void spy() {
-		// TODO Auto-generated method stub
 		System.out.println(getModel() + " reporting in. Hey what do you think they're doing down there? What do you mean that's *my* job!?");
 		
 	}

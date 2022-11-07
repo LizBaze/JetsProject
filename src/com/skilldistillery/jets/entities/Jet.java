@@ -13,12 +13,6 @@ public abstract class Jet {
 		this.price = price;
 	}
 
-
-	public double getSpeedInMach() {
-		//TODO
-		return 0.0;
-	}
-
 	public abstract void fly();
 
 

@@ -119,8 +119,7 @@ public class JetsApplication {
 		} while ( ! realCategory);
 
 		System.out.println("Please enter the model: ");
-		String model = sc.next();
-		sc.nextLine();
+		String model = sc.nextLine();
 		System.out.println("Please enter the speed: ");
 		double speed = sc.nextDouble();
 		sc.nextLine();

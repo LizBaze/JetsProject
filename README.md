@@ -12,6 +12,7 @@ This was completed during week 3 of the Skill Distillery Java Full-Stack bootcam
 - Math.max(dataType num1, dataType num2) returns the higher value of two numbers passed as arguments
 - Need to flush scanner in the catch block to ensure the user is actually allowed to try again (the first flush never executes since the inputMismatchException causes the program to skip to the catch block)
 - I will keep finding things that need to be fixed or changed if I keep looking for them
+- Check your code 10 times every time you change one thing because you probably broke something
 
 ### Technology Used
 - Java
